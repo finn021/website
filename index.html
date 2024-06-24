@@ -2,10 +2,12 @@
 <html lang='en'>
   <head>
     <meta charset='utf-8' />
-    <script src="https://unpkg.com/ical.js/dist/ical.es5.min.cjs"></script>
+    <script src="https://unpkg.com/ical.js@2.0.1/dist/ical.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/icalendar/index.global.min.js'></script>
     <script>
+      import dayGridPlugin from '@fullcalendar/daygrid'
+      import iCalendarPlugin from '@fullcalendar/icalendar'
       document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
