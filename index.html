@@ -2,18 +2,17 @@
 <html lang='en'>
   <head>
     <meta charset='utf-8' />
-    <script type='module'>import ICAL from 'https://unpkg.com/ical.js';</script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js'></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/icalendar@6.1.14/index.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@6.1.14/index.global.min.js"></script>
     <!--<script src="https://unpkg.com/ical.js/dist/ical.es5.min.cjs"></script>-->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
           initialView: 'dayGridMonth',
+          googleCalendarApiKey: 'AIzaSyCZH5WOPrVDT49CYk38wGqVDt6fAwh8yTI',
           events: {
-            url: 'https://rutherglenhs-vic.compass.education/download/sharedCalendar.aspx?uid=2465&key=efcc3031-5c91-43a4-8ba4-f78a4df2e78a&c.ics',
-            format: 'ics'
+            googleCalendarId: 'klrenn5ege9dheilr8fu6739oset0mu7@import.calendar.google.com'
           }
         });
         calendar.render();
