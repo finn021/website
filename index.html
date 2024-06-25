@@ -19,7 +19,16 @@
             center: '',
             end: 'prev,next'
           },
-          initialView: 'listWeek',
+          views: {
+          custom: {
+            type: 'listWeek',
+            duration: {
+                days: 7
+            },
+            hiddenDays: [0, 6] // Hide Sunday and Saturday?
+        }
+    },
+          initialView: 'custom',
           googleCalendarApiKey: 'AIzaSyCZH5WOPrVDT49CYk38wGqVDt6fAwh8yTI',
           events: {
             googleCalendarId: 'klrenn5ege9dheilr8fu6739oset0mu7@import.calendar.google.com'
