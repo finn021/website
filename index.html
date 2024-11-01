@@ -1,50 +1,17 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
   <head>
-    <meta charset='utf-8' />
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js'></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@6.1.14/index.global.min.js"></script>
-    <!--<script src="https://unpkg.com/ical.js/dist/ical.es5.min.cjs"></script>-->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-            //titleFormat: {
-              //month: 'long',
-              //year: 'numeric',
-             // day: 'numeric',
-             // weekday: 'long' },
-            headerToolbar: {
-            start: '',//'title',
-            center: '',
-            end: '',//'prev,next'
-          },
-          views: {
-          listWeek: {
-            duration: {
-                days: 10
-            },
-        }
-    },
-          weekends: false,
-          initialView: 'listWeek',
-          googleCalendarApiKey: 'AIzaSyCZH5WOPrVDT49CYk38wGqVDt6fAwh8yTI',
-          events: {
-            googleCalendarId: 'klrenn5ege9dheilr8fu6739oset0mu7@import.calendar.google.com'
-          }
-        });
-        console.log(calendar.getEvents())
-        calendar.render();
-      });
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test Website</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <a class="weatherwidget-io" href="https://forecast7.com/en/n36d15146d60/chiltern/" data-label_1="CHILTERN" data-label_2="WEATHER" data-font="Verdana" data-days="5" data-theme="pure" data-textcolor="#1a1a1a" >CHILTERN WEATHER</a>
-    <script>
-      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-    </script>
-    <div style="position:absolute;width:400px;right:0;padding-top:5px;padding-right:5px;">
-      <div id='calendar'></div>
-    </div>
+    <main>
+        <h1>Test Website</h1>  
+    </main>
+    <script src="index.js"></script>
   </body>
 </html>
