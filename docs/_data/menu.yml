@@ -7,7 +7,7 @@ entries:
         url: https://github.com/finn021
   - title: posts
     post_list:
-       limit: 5
+       limit: 6
        show_more: true
        show_more_text: see archive..
        show_more_url: archive.html
