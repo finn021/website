@@ -5,6 +5,7 @@ description: Welcome to my personal website.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://finnb.xyz" # the base hostname & protocol for your site, e.g. http://example.com
 
+favicon: "favicon.png"
 remote_theme: riggraz/no-style-please
 
 plugins:
@@ -13,5 +14,6 @@ plugins:
 
 theme_config:
   appearance: "light"
+  back_home_text: "back"
   date_format: "%Y-%m-%d"
   show_description: true
