@@ -30,7 +30,7 @@ github_username:  finn021
 #
 
 # Build settings
-remote-theme: riggraz/no-style-please
+remote_theme: riggraz/no-style-please
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
