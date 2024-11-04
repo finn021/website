@@ -30,7 +30,7 @@ github_username:  finn021
 #
 
 # Build settings
-theme: minima
+theme: no-style-please
 plugins:
   - jekyll-feed
 
