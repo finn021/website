@@ -1,0 +1,7 @@
+entries:
+  - title: me 
+    entries:
+      - title: email
+        url: mailto:hawkish.dealing.02@icloud.com
+  - title: Blog
+    post_list: true
