@@ -4,6 +4,6 @@ entries:
       - title: email
         url: mailto:hawkish.dealing.02@icloud.com
       - title: github
-	url: https://github.com/finn021
+        url: https://github.com/finn021
   - title: posts
     post_list: true
