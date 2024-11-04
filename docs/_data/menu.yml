@@ -6,7 +6,7 @@ entries:
       - title: github
         url: https://github.com/finn021
   - title: posts
-    post_list: true
+    post_list:
        limit: 5
        show_more: true
        show_more_text: see archive..
