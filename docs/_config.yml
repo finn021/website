@@ -1,11 +1,9 @@
 title: Finn's Website
-author: Finn B
+# author: Finn B
 email: hawkish.dealing.02@icloud.com
-description: A collection of [_______]
+description: Welcome to my personal website.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://finnb.xyz" # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: n/a
-github_username:  finn021
 
 remote_theme: riggraz/no-style-please
 
@@ -15,4 +13,5 @@ plugins:
 
 theme_config:
   appearance: "auto"
+  date_format: "%Y-%m-%d"
   show_description: true
