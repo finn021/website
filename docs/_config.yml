@@ -13,7 +13,6 @@ plugins:
   - jekyll-seo-tag
 
 theme_config:
-  appearance: "auto"
   back_home_text: "back"
   date_format: "%Y-%m-%d"
   show_description: true
