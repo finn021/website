@@ -32,6 +32,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s, box-shadow 0.2s;
+	    cursor: pointer;
         }
         .card:hover {
             transform: translateY(-10px);
@@ -64,10 +65,17 @@
 <body>
     <div class="card-container">
         <div onclick="location.href='games/slope.html';" class="card">
-            <img src="assets/img/games/slope.jpeg" alt="Slope">
+            <img src="assets/img/games/slope.jpg" alt="Slope">
             <div class="card-content">
                 <h3>Slope</h3>
                 <p>Keep the ball from rolling off the track and colliding with obstacles.</p>
+            </div>
+        </div>
+	<div onclick="location.href='games/tunnel-rush.html';" class="card">
+            <img src="assets/img/games/tunnel-rush.jpg" alt="Tunnel Rush">
+            <div class="card-content">
+                <h3>Tunnel Rush</h3>
+                <p>Sample Text</p>
             </div>
         </div>
         <!-- Add more cards as needed -->
