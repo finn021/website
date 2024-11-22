@@ -1,10 +1,10 @@
 entries:
-  - title: me 
+  - title: links
     entries:
       - title: email
-        url: mailto:hawkish.dealing.02@icloud.com
-      - title: github
-        url: https://github.com/finn021
+        url: mailto:finn@finnb.xyz
+      - title: games
+        url: games/
   - title: posts
     post_list:
        limit: 6
