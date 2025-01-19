@@ -25,13 +25,20 @@
             }
         }
     </style>
+    <script src="id.js"></script>
 </head>
 <body>
     <div class="left">
         <iframe src="https://jackbox.tv"></iframe>
     </div>
     <div class="right">
-        <iframe src="https://www.youtube.com/embed/LCVICxFNiEI?autoplay=1&controls=0&showinfo=0&disablekb=1"></iframe>
+        <iframe src="https://www.youtube.com/embed/" + videoID + "?autoplay=1&controls=0&showinfo=0&disablekb=1"></iframe>
     </div>
 </body>
+    <script>
+// Initial check
+if (window.innerWidth < 1024 || window.innerHeight < 768) {
+    alert('Your experience may be impacted on smaller devices. We recommend using an iPad or laptop for the best experience.');
+}
+    </script>
 </html>
