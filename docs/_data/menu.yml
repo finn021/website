@@ -5,9 +5,11 @@ entries:
         url: mailto:finn@finnb.xyz
       - title: games
         url: games/
-  - title: posts
-    post_list:
-       limit: 6
-       show_more: true
-       show_more_text: see archive..
-       show_more_url: archive.html
+      - title: jackbox
+        url: jackbox/
+#  - title: posts
+#    post_list:
+#       limit: 6
+#       show_more: true
+#       show_more_text: see archive..
+#       show_more_url: archive.html
