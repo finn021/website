@@ -32,13 +32,16 @@
         <iframe src="https://jackbox.tv"></iframe>
     </div>
     <div class="right">
-        <iframe src="https://www.youtube.com/embed/" + videoID + "?autoplay=1&controls=0&showinfo=0&disablekb=1"></iframe>
+        <iframe id="streamPlayer"></iframe>
     </div>
 </body>
     <script>
 // Initial check
 if (window.innerWidth < 1024 || window.innerHeight < 768) {
     alert('Your experience may be impacted on smaller devices. We recommend using an iPad or laptop for the best experience.');
+}
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('streamPlayer').src = "https://www.youtube.com/embed/" + videoID + "?autoplay=1&controls=0&showinfo=0&disablekb=1";
 }
     </script>
 </html>
