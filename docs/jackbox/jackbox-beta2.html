@@ -12,13 +12,13 @@
             height: 100vh;
         }
         .left, .right {
-            overflow: hidden; /* Prevent scrollbars */
+            overflow: hidden;
         }
         .left {
-            flex: 1; /* Take up remaining space */
+            flex: 1; /* Take remaining space in landscape */
         }
         .right {
-            flex: 1; /* Take up space equally in landscape */
+            flex: 1; /* Equal space in landscape */
         }
         .left iframe, .right iframe {
             width: 100%;
@@ -29,15 +29,19 @@
                 flex-direction: column; /* Stack vertically */
             }
             .right {
-                flex: 0 0 calc(100vw * 9 / 16); /* Fix height for 16:9 aspect ratio */
+                flex: 0; /* Fixed height for the YouTube player */
+                height: calc(100vw * 9 / 16); /* Maintain 16:9 ratio */
             }
             .left {
-                flex: 1; /* Take up the rest of the screen */
+                flex: 1; /* Take up all remaining space */
+            }
+            .left iframe {
+                height: 100%; /* Fill the remaining space */
             }
         }
         @media (orientation: landscape) {
-            .right iframe, .left iframe {
-                height: 100%; /* Full height in landscape */
+            .left iframe, .right iframe {
+                height: 100%; /* Fill parent height in landscape */
             }
         }
     </style>
