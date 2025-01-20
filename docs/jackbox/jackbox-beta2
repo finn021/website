@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jackbox Games</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            height: 100vh;
+        }
+        .left, .right {
+            overflow: hidden; /* Prevent scrollbars */
+        }
+        .left {
+            flex: 1; /* Take up remaining space */
+        }
+        .right {
+            flex: 1; /* Take up space equally in landscape */
+        }
+        .left iframe, .right iframe {
+            width: 100%;
+            border: none;
+        }
+        @media (orientation: portrait) {
+            body {
+                flex-direction: column; /* Stack vertically */
+            }
+            .right {
+                flex: 0 0 calc(100vw * 9 / 16); /* Fix height for 16:9 aspect ratio */
+            }
+            .left {
+                flex: 1; /* Take up the rest of the screen */
+            }
+        }
+        @media (orientation: landscape) {
+            .right iframe, .left iframe {
+                height: 100%; /* Full height in landscape */
+            }
+        }
+    </style>
+    <script src="id.js"></script>
+</head>
+<body>
+    <div class="left">
+        <iframe src="https://jackbox.tv"></iframe>
+    </div>
+    <div class="right">
+        <iframe id="streamPlayer"></iframe>
+    </div>
+</body>
+<script>
+    // Initial check
+    if (window.innerWidth < 1024 || window.innerHeight < 768) {
+        alert('Your experience may be impacted on smaller devices. We recommend using an iPad or laptop for the best experience.');
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('streamPlayer').src = "https://www.youtube.com/embed/" + videoID + "?autoplay=1&controls=0&showinfo=0&disablekb=1&rel=0";
+    });
+</script>
+</html>
