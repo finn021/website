@@ -13,14 +13,9 @@
         }
         .left, .right {
             flex: 1;
-            overflow: scroll;
+            overflow: hidden; /* Prevent scrollbars */
         }
-        .left iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        .right iframe {
+        .left iframe, .right iframe {
             width: 100%;
             border: none;
         }
@@ -29,14 +24,17 @@
                 flex-direction: column;
             }
             .right iframe {
-                height: calc(100vw * 9 / 16); /* 16:9 aspect ratio */
+                height: calc(100vw * 9 / 16); /* Maintain 16:9 aspect ratio */
             }
             .left iframe {
-                height: calc(100vh - (100vw * 9 / 16));
+                height: calc(100vh - (100vw * 9 / 16)); /* Fill remaining space */
             }
         }
         @media (orientation: landscape) {
             .right iframe {
+                height: 100%;
+            }
+            .left iframe {
                 height: 100%;
             }
         }
