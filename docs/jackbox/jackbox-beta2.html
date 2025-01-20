@@ -29,14 +29,14 @@
                 flex-direction: column; /* Stack vertically */
             }
             .right {
-                flex: 0; /* Fixed height for the YouTube player */
+                flex: 0 0 calc(100vw * 9 / 16); /* Fixed height for the YouTube player */
                 height: calc(100vw * 9 / 16); /* Maintain 16:9 ratio */
             }
             .left {
                 flex: 1; /* Take up all remaining space */
             }
-            .left iframe {
-                height: 100%; /* Fill the remaining space */
+            .left iframe, .right iframe {
+                height: 100%; /* Fill parent container */
             }
         }
         @media (orientation: landscape) {
