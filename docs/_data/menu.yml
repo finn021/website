@@ -7,7 +7,7 @@ entries:
 #        url: games/
       - title: jackbox
         entries:
-          - title: player
+        - title: player
           url: jackbox/
           - title: game list
             url: jackbox-list
