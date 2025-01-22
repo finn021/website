@@ -8,7 +8,7 @@ entries:
         - title: player
           url: jackbox/
         - title: game list
-          url: jackbox/jackbox-list
+          url: jackbox/games-list
       # - title: games
       #   url: games/
 #  - title: posts
