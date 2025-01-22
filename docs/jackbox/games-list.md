@@ -194,4 +194,4 @@ Roleplay as eccentric characters living together in a reality TV show, creating 
 
 ---
 
-**[Grid-based list](#)**  
+[Grid-based list](games-list-grid)    
