@@ -1,15 +1,14 @@
 entries:
-  - title: links
-    entries:
-      - title: email
-        url: mailto:finn@finnb.xyz
-      
-      - title: jackbox
-        entries:
-          - title: player
-            url: jackbox/
-          - title: game list
-            url: jackbox/jackbox-list
+#  - title: links
+ #   entries:
+ #     - title: email
+ #       url: mailto:finn@finnb.xyz
+    - title: jackbox
+      entries:
+        - title: player
+          url: jackbox/
+        - title: game list
+          url: jackbox/jackbox-list
       # - title: games
       #   url: games/
 #  - title: posts
