@@ -9,7 +9,7 @@ entries:
           url: jackbox/
         - title: game list
           url: jackbox/games-list
-    - title: other games
+    - title: steam games
       entries:
         - title: one-armed cook
           url: https://store.steampowered.com/app/1977530/Onearmed_cook/
