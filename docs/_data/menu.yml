@@ -12,9 +12,9 @@ entries:
     - title: other
       entries:
         - title: steam games
-          url: steam.md
+          url: steam.html
         - title: spreadsheet
-          url: spreadsheet.md
+          url: spreadsheet.html
       # - title: games
       #   url: games/
 #  - title: posts
