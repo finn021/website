@@ -9,6 +9,12 @@ entries:
           url: jackbox/
         - title: game list
           url: jackbox/games-list
+    - title: other games
+      entries:
+        - title: one-armed cook
+          url: https://store.steampowered.com/app/1977530/Onearmed_cook/
+        - title: supermarket together
+          url: https://store.steampowered.com/app/2709570/Supermarket_Together/
       # - title: games
       #   url: games/
 #  - title: posts
