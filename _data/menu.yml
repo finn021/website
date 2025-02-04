@@ -1,7 +1,7 @@
 entries:
     - title: me
       entries:
-        - title: "email:"
+#        - title: "email:"
         - title: "<a href='mailto:finn@finnb.xyz'>finn@finnb.xyz</a>"
         - title: bluesky 🡥
           url: https://bsky.app/profile/finnb.xyz
@@ -11,7 +11,7 @@ entries:
     - title: jackbox
       entries:
         - title: player
-          url: jackbox/
+          url: <a href="jackbox/" target="_blank">
         - title: game list
           url: jackbox/games-list
     - title: other
