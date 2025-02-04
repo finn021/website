@@ -50,17 +50,17 @@ function getCookie(name) {
 function checkDarkMode() {
   var darkMode = getCookie("darkMode");
   if (darkMode === "enabled") {
-    document.html.classList.add("dark-mode");
+    document.documentElement.classList.add("dark-mode");
     document.getElementById("dark-mode-icon").textContent = "brightness_3"; // Moon icon
   } else {
-    document.html.classList.remove("dark-mode");
+    document.documentElement.html.classList.remove("dark-mode");
     document.getElementById("dark-mode-icon").textContent = "light_mode"; // Sun icon
   }
 }
 
 // Function to toggle dark mode and set the cookie
 function toggleDarkMode() {
-  var element = document.html;
+  var element = document.documentElement;
   element.classList.toggle("dark-mode");
 
   var icon = document.getElementById("dark-mode-icon");
