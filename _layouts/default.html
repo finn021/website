@@ -19,19 +19,19 @@
     {% if page.custom_js %}
       {% for js_file in page.custom_js %}
         <script type="text/javascript" src="{{ site.baseurl }}/assets/js/{{ js_file }}.js"></script>
-	<script>function toggleDarkMode() {
-  		var element = document.body;
- 		element.classList.toggle("dark-mode");
-
-  		var icon = document.getElementById("dark-mode-icon");
-  		if (element.classList.contains("dark-mode")) {
-    			icon.textContent = "brightness_3"; // Moon icon
-  		} else {
-    		icon.textContent = "wb_sunny"; // Sun icon
-  		}
-	}
-	</script>
       {% endfor %}
     {% endif %}
   </body>
+  <script>function toggleDarkMode() {
+  	var element = document.body;
+ 	element.classList.toggle("dark-mode");
+
+  	var icon = document.getElementById("dark-mode-icon");
+  	if (element.classList.contains("dark-mode")) {
+    		icon.textContent = "brightness_3"; // Moon icon
+  	} else {
+    	icon.textContent = "wb_sunny"; // Sun icon
+  	}
+  }
+  </script>
 </html>
