@@ -10,8 +10,7 @@ entries:
 
     - title: jackbox
       entries:
-        - title: player
-          url: <a href="jackbox/" target="_blank">
+        - title: "<a href="jackbox/" target="_blank">player</a>"
         - title: game list
           url: jackbox/games-list
     - title: other
