@@ -1,7 +1,7 @@
 entries:
     - title: me
       entries:
-        - title: email 🡥
+        - title: email
           entries:
             - title: "<a href='mailto:finn@finnb.xyz'>finn@finnb.xyz</a>"
         - title: bluesky 🡥
@@ -11,7 +11,7 @@ entries:
 
     - title: jackbox
       entries:
-        - title: player 🡥
+        - title: player
           url: jackbox/
         - title: game list
           url: jackbox/games-list
