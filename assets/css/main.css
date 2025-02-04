@@ -2,7 +2,10 @@ html {
   height: 100%;
   background-color: white;
 }
-
+html.dark-mode {
+  background-color: #0c0b0b;
+  color: white;
+}
 body {
   font-family: monospace;
   font-size: 16px;
@@ -12,15 +15,11 @@ body {
   overflow-wrap: break-word;
 
 }
-html.dark-mode {
-  background-color: #0c0b0b;
-  color: white;
-}
 
 #dark-mode-toggle {
-  position: sticky;
-  top: 14px;
-  right: 14px;
+  position: fixed;
+  top: 15px;
+  right: 15px;
   background: none;
   border: none;
   cursor: pointer;
