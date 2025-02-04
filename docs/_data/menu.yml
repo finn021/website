@@ -1,11 +1,14 @@
 entries:
-#  - title: links
- #   entries:
- #     - title: email
- #       url: mailto:finn@finnb.xyz
+    - title: me
+      entries:
+        - title: email 🡵
+          url: mailto:finn@finnb.xyz
+        - title: bluesky 🡵
+          url: https://bsky.app/profile/finnb.xyz
+
     - title: jackbox
       entries:
-        - title: player
+        - title: player 🡵
           url: jackbox/
         - title: game list
           url: jackbox/games-list
@@ -13,7 +16,7 @@ entries:
       entries:
         - title: steam games
           url: steam.html
-        - title: spreadsheet
+        - title: THE spreadsheet
           url: spreadsheet.html
       # - title: games
       #   url: games/
