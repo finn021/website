@@ -2,8 +2,8 @@ entries:
     - title: me
       entries:
         - title: email 🡥
-        entries:
-          - title: "<a href='mailto:finn@finnb.xyz'>finn@finnb.xyz</a>"
+          entries:
+            - title: "<a href='mailto:finn@finnb.xyz'>finn@finnb.xyz</a>"
         - title: bluesky 🡥
           url: https://bsky.app/profile/finnb.xyz
         - title: spotify 🡥
