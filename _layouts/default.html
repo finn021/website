@@ -6,7 +6,7 @@
     <main class="page-content" aria-label="Content">
       <div class="w">
 	<button id="dark-mode-toggle" onclick="toggleDarkMode()">
- 	<span class="material-icons" id="dark-mode-icon">wb_sunny</span>
+ 	<span class="material-icons" id="dark-mode-icon">light_mode</span>
 	</button>
         {{ content }}
       </div>
@@ -22,16 +22,59 @@
       {% endfor %}
     {% endif %}
   </body>
-  <script>function toggleDarkMode() {
-  	var element = document.body;
- 	element.classList.toggle("dark-mode");
-
-  	var icon = document.getElementById("dark-mode-icon");
-  	if (element.classList.contains("dark-mode")) {
-    		icon.textContent = "brightness_3"; // Moon icon
-  	} else {
-    	icon.textContent = "wb_sunny"; // Sun icon
-  	}
+  <script>
+// Function to set a cookie
+function setCookie(name, value, days) {
+  var expires = "";
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    expires = "; expires=" + date.toUTCString();
   }
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+// Function to get a cookie
+function getCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+
+// Function to check and apply dark mode based on the cookie
+function checkDarkMode() {
+  var darkMode = getCookie("darkMode");
+  if (darkMode === "enabled") {
+    document.body.classList.add("dark-mode");
+    document.getElementById("dark-mode-icon").textContent = "brightness_3"; // Moon icon
+  } else {
+    document.body.classList.remove("dark-mode");
+    document.getElementById("dark-mode-icon").textContent = "light_mode"; // Sun icon
+  }
+}
+
+// Function to toggle dark mode and set the cookie
+function toggleDarkMode() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+
+  var icon = document.getElementById("dark-mode-icon");
+  if (element.classList.contains("dark-mode")) {
+    icon.textContent = "brightness_3"; // Moon icon
+    setCookie("darkMode", "enabled", 7); // Set cookie for 7 days
+  } else {
+    icon.textContent = "light_mode"; // Sun icon
+    setCookie("darkMode", "disabled", 7); // Set cookie for 7 days
+  }
+}
+
+// Check dark mode on page load
+document.addEventListener("DOMContentLoaded", checkDarkMode);
+
   </script>
 </html>
