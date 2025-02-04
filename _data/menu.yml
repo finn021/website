@@ -1,13 +1,12 @@
 entries:
     - title: me
       entries:
-        - title: email
-          entries:
-            - title: "<a href='mailto:finn@finnb.xyz'>finn@finnb.xyz</a>"
+        - title: email:
+        - title: "<a href='mailto:finn@finnb.xyz'>finn@finnb.xyz</a>"
         - title: bluesky 🡥
           url: https://bsky.app/profile/finnb.xyz
-        - title: spotify 🡥
-          url: https://open.spotify.com/user/hk4af9tr1agt0o62bazp767nh
+#        - title: spotify 🡥
+#          url: https://open.spotify.com/user/hk4af9tr1agt0o62bazp767nh
 
     - title: jackbox
       entries:
