@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Trump's Christian Hypocrisy"
+title:  "Trump's Hypocrisy"
 date:   2025-02-09 10:00:00 +1100
 categories: politics
 ---
