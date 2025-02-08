@@ -20,9 +20,9 @@ entries:
           url: spreadsheet
       # - title: games
       #   url: games/
-#  - title: posts
-#    post_list:
-#       limit: 6
-#       show_more: true
-#       show_more_text: see archive..
+   - title: posts
+     post_list:
+        limit: 4
+        show_more: true
+        show_more_text: see more..
 #       show_more_url: archive.html
