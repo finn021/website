@@ -20,8 +20,8 @@ entries:
           url: spreadsheet
       # - title: games
       #   url: games/
-   - title: posts
-     post_list:
+    - title: posts
+      post_list:
         limit: 4
         show_more: true
         show_more_text: see more..
