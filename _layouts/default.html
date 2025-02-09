@@ -61,6 +61,7 @@ function checkDarkMode() {
 // Function to toggle dark mode and set the cookie
 function toggleDarkMode() {
   var element = document.documentElement;
+  element.classList.add("transition-bg"); // Add transition class
   element.classList.toggle("dark-mode");
 
   var icon = document.getElementById("dark-mode-icon");
@@ -70,6 +71,10 @@ function toggleDarkMode() {
   } else {
     icon.textContent = "light_mode"; // Sun icon
     setCookie("darkMode", "disabled", 7); // Set cookie for 7 days
+  }
+ setTimeout(function() {
+      element.classList.remove("transition-bg");
+    }, 1200); // Match the transition duration
   }
 }
 
