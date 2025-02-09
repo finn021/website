@@ -1,27 +1,29 @@
 entries:
-    - title: me
-      entries:
-#        - title: "email:"
-        - title: "<a href='mailto:finn@finnb.xyz'>finn@finnb.xyz</a>"
-        - title: "<a href='https://bsky.app/profile/finnb.xyz' target='_blank'>bluesky 🡥</a>"
-#        - title: spotify 🡥
-#          url: https://open.spotify.com/user/hk4af9tr1agt0o62bazp767nh
+  - title: me
+    entries:
+      # - title: "email:"
+      - title: "<a href='mailto:finn@finnb.xyz'>finn@finnb.xyz</a>"
+      - title: "<a href='https://bsky.app/profile/finnb.xyz' target='_blank'>bluesky 🡥</a>"
+      # - title: spotify 🡥
+      #   url: https://open.spotify.com/user/hk4af9tr1agt0o62bazp767nh
 
-    - title: jackbox
-      entries:
-        - title: "<a href='jackbox/' target='_blank'>player 🡥</a>"
-        - title: game list
-          url: jackbox/games-list
-    - title: other
-      entries:
-        - title: steam games
-          url: steam
-        - title: THE spreadsheet
-          url: spreadsheet
+  - title: jackbox
+    entries:
+      - title: "<a href='jackbox/' target='_blank'>player 🡥</a>"
+      - title: game list
+        url: jackbox/games-list
+
+  - title: other
+    entries:
+      - title: steam games
+        url: steam
+      - title: THE spreadsheet
+        url: spreadsheet
       # - title: games
       #   url: games/
-    post_list:
-        limit: 4
-        show_more: true
-        show_more_text: see archive..
-        show_more_url: archive.html
+
+post_list:
+  limit: 4
+  show_more: true
+  show_more_text: see archive..
+  show_more_url: archive.html
