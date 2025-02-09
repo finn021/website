@@ -2,7 +2,7 @@
 layout: post
 title:  "Trump's Hypocrisy"
 date:   2025-02-09 10:00:00 +1100
-categories: politics
+categories:
 ---
 
 During Trump's inauguration prayer service (Jan 21, 2025), Bishop Mariann Budde delivered a sermon in calm words urging Trump to have mercy on marginalised groups and to have compassion.
