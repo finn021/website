@@ -17,12 +17,8 @@ On February 6 2025, Trump signed an executive order titled "Eradicating Anti-Chr
 
 the allocation of resources to this seems contradictory and unnecessary.
 
----
-
-Trump's pick to lead the new office is Paula White, long time **loyalist and financial supporter**. She's just **batshit crazy** and how you can call the other lady a "radical leftist hard line trump hater" and ungraciously political is beyond me when this is his pick.
-
-White is extremely political - however in his favour, so it doesn't matter. I feel I don’t need to say much more about her and I will let you draw your own conclusion by watching the following videos.
-
-<iframe src="https://drive.google.com/file/d/1BxxcHlCYQ_cZ_tvSBmUcOBZFX1aU4CTM/preview" width="135" height="240"></iframe>
+Trump's pick to lead the new office is Paula White, long time **loyalist and financial supporter**. She's just **batshit crazy** and how you can call the other lady a "radical leftist hard line trump hater" and ungraciously political is beyond me when this is his pick. White is extremely political - however in his favour, so it doesn't matter. I feel I don’t need to say much more about her and I will let you draw your own conclusion by watching the following video.
 
 All of Trump's appointments to various government departments clearly demonstrate his preference for individuals who will unquestioningly follow his lead and endorse his actions. Simultaneously, he hypocritically labels any critic as a radical lunatic and ensures his circle is filled with loyalists.
+
+<iframe src="https://drive.google.com/file/d/1BxxcHlCYQ_cZ_tvSBmUcOBZFX1aU4CTM/preview" width="135" height="240"></iframe>
