@@ -14,5 +14,5 @@ plugins:
 
 theme_config:
   back_home_text: "back"
-  date_format: "%Y-%m-%d"
+  date_format: "%d-%m-%Y"
   show_description: false
