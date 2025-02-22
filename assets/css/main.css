@@ -1,6 +1,8 @@
 html { 
   height: 100%;
   background-color: white;
+}
+html.transition-bg {
   transition: background-color 0.5s ease, color 1s ease;
 }
 html.dark-mode {
