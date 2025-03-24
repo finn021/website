@@ -11,7 +11,7 @@ entries:
     entries:
       - title: "<a href='jackbox/' target='_blank'>player 🡥</a>"
       - title: game list
-        url: jackbox/games-list
+        url: jackbox/games-list.html
   - title: other
     entries:
       - title: steam games
@@ -20,9 +20,9 @@ entries:
         url: spreadsheet
     # - title: games
     #   url: games/
-  - title: posts
-    post_list:
-      limit: 4
-      show_more: true
-      show_more_text: see archive..
-      show_more_url: archive.html
+#  - title: posts
+#    post_list:
+#      limit: 4
+#      show_more: true
+#      show_more_text: see archive..
+#      show_more_url: archive.html
