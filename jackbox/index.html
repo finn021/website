@@ -49,7 +49,6 @@
             }
         }
     </style>
-    <script src="id.js"></script>
 </head>
 <body>
     <div class="left">
@@ -61,7 +60,25 @@
 </body>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        document.getElementById('streamPlayer').src = "https://www.youtube.com/embed/" + videoID + "?autoplay=1&controls=0&showinfo=0&disablekb=1&rel=0";
+  // Define the function to fetch the video ID
+  function fetchVideoID() {
+    const binUrl = 'https://api.jsonbin.io/v3/b/67e10e718a456b79667b8270/latest';
+    
+    fetch(binUrl)
+      .then(response => response.json())
+      .then(data => {
+        const videoID = data.record.video_id;
+        // Set the iframe source once the video ID is fetched
+        document.getElementById('streamPlayer').src = `https://www.youtube.com/embed/${videoID}?autoplay=1&controls=0&showinfo=0&disablekb=1&rel=0`;
+      })
+      .catch(error => {
+        console.error('Error fetching the video ID:', error);
+      });
+  }
+
+  // Call the function to fetch the video ID and update the iframe
+  fetchVideoID();
+});
     });
 </script>
 </html>
