@@ -1,5 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: page
+title: Game List
+---
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,7 +62,6 @@ body {
     background: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
-    overflow-y: auto;
 }
 
 .popup-content {
@@ -80,13 +81,10 @@ body {
     cursor: pointer;
 }
 
-#popup-images {
+#popup-images img {
     width: 100%;
     margin-top: 10px;
     border-radius: 10px;
-}
-img, video {
-  max-width:90%;
 }
 </style>
 </head>
@@ -141,17 +139,9 @@ fetch("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en
                     const imagesContainer = document.getElementById("popup-images");
                     imagesContainer.innerHTML = "";
                     game.game_info.images.forEach(imgSrc => {
-                    		if (imgSrc.endsWith(".mp4")) {
-           								const video = document.createElement("video");
-            							video.src = imgSrc;
-                          video.autoplay = true;
-                          video.controls = true;
-            							imagesContainer.appendChild(video);
-       									} else {
-                       	 const img = document.createElement("img");
-                       	 img.src = imgSrc;
-                       	 imagesContainer.appendChild(img);
-        								}
+                        const img = document.createElement("img");
+                        img.src = imgSrc;
+                        imagesContainer.appendChild(img);
                     });
 
                     document.getElementById("popup").style.display = "flex";
@@ -165,4 +155,3 @@ document.querySelector(".close-btn").addEventListener("click", () => {
     document.getElementById("popup").style.display = "none";
 });
 </script>
-</html>
