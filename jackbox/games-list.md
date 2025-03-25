@@ -161,7 +161,7 @@ fetch("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en
 				document.getElementById("popup-subtitles").textContent = "Not Supported";
 			}
 
-                    document.getElementById("popup-categories").textContent = game.game_info.tags.replaceAll(",", " | ";
+                    document.getElementById("popup-categories").textContent = game.game_info.tags.replaceAll(",", " | ");
 
                     const imagesContainer = document.getElementById("popup-images");
                     imagesContainer.innerHTML = "";
