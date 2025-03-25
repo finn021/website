@@ -1,5 +1,5 @@
 ---
-layout: sandbox
+layout: sandbox-page
 title: Game Gallery
 ---
 <head>
