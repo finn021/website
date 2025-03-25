@@ -60,16 +60,18 @@ body {
     background: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
-    overflow-y: auto;
 }
 
 .popup-content {
     background: white;
     padding: 20px;
     border-radius: 10px;
-    max-width: 500px;
+    width: 75vw;
+    max-width: 600px;
     text-align: center;
     position: relative;
+    overflow-y: auto;
+    max-height: 70vh;
 }
 
 .close-btn {
@@ -86,7 +88,8 @@ body {
     border-radius: 10px;
 }
 img, video {
-  max-width:90%;
+  max-width: 100%;
+  margin-top: 20px;
 }
 </style>
 </head>
@@ -163,6 +166,7 @@ fetch("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en
 
 document.querySelector(".close-btn").addEventListener("click", () => {
     document.getElementById("popup").style.display = "none";
+    document.getElementsByTagName("video").paused = true;
 });
 </script>
 </html>
