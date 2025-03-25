@@ -12,6 +12,7 @@ body {
     font-family: monospace;
     min-height: 100vh;
     padding: 20px;
+    
 }
 
 #game-container {
@@ -142,7 +143,7 @@ fetch("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en
                 container.appendChild(gameDiv); // Append to container
 
                 function openPopup(game) {
-		    document.getElementById('game-container').overflow = "hidden";
+		    document.querySelector('body').overflow = "hidden";
                     document.getElementById("popup-title").textContent = game.name;
                     document.getElementById("popup-description").textContent = game.game_info.description;
                     document.getElementById("popup-players").textContent = `${game.game_info.players.min} - ${game.game_info.players.max}`;
@@ -178,7 +179,7 @@ fetch("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en
 
 document.querySelector(".close-btn").addEventListener("click", () => {
     document.getElementById("popup").style.display = "none";
-    document.getElementById('game-container').overflow = "auto";
+    document.querySelector('body').overflow = "hidden";
     document.querySelector('video').pause();
 });
 </script>
