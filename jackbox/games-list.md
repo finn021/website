@@ -118,7 +118,7 @@ p {
         <p><strong>Remote Play:</strong> <span id="popup-stream-friendly"></span></p>
         <p><strong>Comments:</strong> <span id="popup-stream-friendly-description"></span></p>
         <p><strong>Subtitles:</strong> <span id="popup-subtitles"></span></p>
-        <p><strong>Category:</strong> <span id="popup-categories"></span></p>
+        <p><strong>Tags:</strong> <span style="text-transform:capitalize;" id="popup-tags"></span></p>
         <div id="popup-images"></div>
     </div>
 </div></body>
@@ -149,7 +149,7 @@ fetch("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en
                     document.getElementById("popup-players").textContent = `${game.game_info.players.min} - ${game.game_info.players.max}`;
                     document.getElementById("popup-playtime").textContent = `${game.game_info.playtime.min} - ${game.game_info.playtime.max} minutes`;
                     document.getElementById("popup-stream-friendly").textContent = game.game_info.stream_friendly.replace("_", " ");
-			if (game.game_info.stream_friendly_description == "") {
+			if (game.game_info.stream_friendly_description == null) {
 				document.getElementById("popup-stream-friendly-description").textContent = "N/A";
 			} else {
 				document.getElementById("popup-stream-friendly-description").textContent = game.game_info.stream_friendly_description;
@@ -161,7 +161,7 @@ fetch("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en
 				document.getElementById("popup-subtitles").textContent = "Not Supported";
 			}
 
-                    document.getElementById("popup-categories").textContent = game.game_info.tags.replaceAll(",", " | ");
+                    document.getElementById("popup-tags").textContent = game.game_info.tags.toString().replaceAll(",", " | ");
 
                     const imagesContainer = document.getElementById("popup-images");
                     imagesContainer.innerHTML = "";
