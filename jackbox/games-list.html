@@ -17,71 +17,93 @@ body {
 #game-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center images */
-    gap: 10px; /* Reduce gap for more items */
+    justify-content: space-between;
+    gap: 10px;
     width: 100%;
-    max-width: 1200px; /* Limit width for large screens */
+    max-width: 1200px;
 }
 
-/* Responsive flexible grid */
 .game-item {
-    flex: 1 1 auto; /* Grow and shrink dynamically */
-    max-width: min(25%, 200px); /* Fit up to 4 per row on wide screens */
-    aspect-ratio: 635 / 291; /* Maintain aspect ratio */
+    width: calc(25% - 10px);
+    aspect-ratio: 635 / 291;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    text-align: center;
     transition: transform 0.2s;
+    cursor: pointer;
 }
 
 .game-item:hover {
     transform: scale(1.03);
 }
 
-.game-title {
-    color: white;
-    font-size: clamp(10px, 1vw, 14px); /* Responsive text */
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
-    font-weight: bold;
-    padding: 5px;
-    background: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-/* Responsive layout adjustments */
+/* Responsive Layout */
 @media (max-width: 1024px) {
-    .game-item {
-        max-width: min(33%, 180px); /* 3 per row */
-    }
+    .game-item { width: calc(33.33% - 10px); }
 }
-
 @media (max-width: 768px) {
-    .game-item {
-        max-width: min(50%, 150px); /* 2 per row */
-    }
+    .game-item { width: calc(50% - 10px); }
+}
+@media (max-width: 480px) {
+    .game-item { width: 100%; }
 }
 
-@media (max-width: 480px) {
-    .game-item {
-        max-width: 100%; /* 1 per row on small screens */
-    }
+/* Popup Styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#popup-images img {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
 }
 </style>
 </head>
 <body>
+<div id="game-container"></div>
 
-    <div id="game-container"></div>
-
-
-</body>
+<!-- Popup for game details -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="popup-title"></h2>
+        <p id="popup-description"></p>
+        <p><strong>Players:</strong> <span id="popup-players"></span></p>
+        <p><strong>Playtime:</strong> <span id="popup-playtime"></span></p>
+        <p><strong>Remote Play:</strong> <span id="popup-stream-friendly"></span></p>
+        <p><strong>Comments:</strong> <span id="popup-stream-friendly-description"></span></p>
+        <p><strong>Subtitles:</strong> <span id="popup-subtitles"></span></p>
+        <p><strong>Category:</strong> <span id="popup-categories"></span></p>
+        <div id="popup-images"></div>
+    </div>
+</div></body>
 <script>
 fetch("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en/main/api/v2/packs.json") // Replace with the actual API URL
     .then(response => response.json()) // Parse JSON response
@@ -92,7 +114,7 @@ fetch("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en
             pack.games.forEach(game => {
                 const gameDiv = document.createElement("div"); // Create a new div for each game
                 gameDiv.classList.add("game-item"); // Add a class for styling
-                
+
                 // Set background image
                 gameDiv.style.backgroundImage = `url(${game.background})`;
                 gameDiv.style.backgroundSize = "cover";
@@ -102,11 +124,36 @@ fetch("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en
                 const title = document.createElement("p");
                 title.innerText = game.name;
                 gameDiv.appendChild(title);
-
+                gameDiv.addEventListener("click", () => openPopup(game));
                 container.appendChild(gameDiv); // Append to container
+
+                function openPopup(game) {
+                    document.getElementById("popup-title").textContent = game.name;
+                    document.getElementById("popup-description").textContent = game.game_info.description;
+                    document.getElementById("popup-players").textContent = `${game.game_info.players.min} - ${game.game_info.players.max}`;
+                    document.getElementById("popup-playtime").textContent = `${game.game_info.playtime.min} - ${game.game_info.playtime.max} minutes`;
+                    document.getElementById("popup-stream-friendly").textContent = game.game_info.stream_friendly;
+                    document.getElementById("popup-stream-friendly-description").textContent = game.game_info.stream_friendly_description;
+                    document.getElementById("popup-subtitles").textContent = game.game_info.subtitles;
+                    document.getElementById("popup-categories").textContent = game.game_info.tags;
+
+                    const imagesContainer = document.getElementById("popup-images");
+                    imagesContainer.innerHTML = "";
+                    game.game_info.images.forEach(imgSrc => {
+                        const img = document.createElement("img");
+                        img.src = imgSrc;
+                        imagesContainer.appendChild(img);
+                    });
+
+                    document.getElementById("popup").style.display = "flex";
+                }
+
             });
         });
     })
-    .catch(error => console.error("Error fetching data:", error));
+
+document.querySelector(".close-btn").addEventListener("click", () => {
+    document.getElementById("popup").style.display = "none";
+});
 </script>
 </html>
