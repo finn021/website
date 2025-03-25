@@ -143,15 +143,25 @@ fetch("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en
                 container.appendChild(gameDiv); // Append to container
 
                 function openPopup(game) {
-		    document.querySelector('body').overflow = "hidden";
+		    document.querySelector('body').style.overflow = "hidden";
                     document.getElementById("popup-title").textContent = game.name;
                     document.getElementById("popup-description").textContent = game.game_info.description;
                     document.getElementById("popup-players").textContent = `${game.game_info.players.min} - ${game.game_info.players.max}`;
                     document.getElementById("popup-playtime").textContent = `${game.game_info.playtime.min} - ${game.game_info.playtime.max} minutes`;
-                    document.getElementById("popup-stream-friendly").textContent = game.game_info.stream_friendly;
-                    document.getElementById("popup-stream-friendly-description").textContent = game.game_info.stream_friendly_description;
-                    document.getElementById("popup-subtitles").textContent = game.game_info.subtitles;
-                    document.getElementById("popup-categories").textContent = game.game_info.tags;
+                    document.getElementById("popup-stream-friendly").textContent = game.game_info.stream_friendly.replace("_", " ");
+			if (game.game_info.stream_friendly_description == "") {
+				document.getElementById("popup-stream-friendly-description").textContent = "N/A";
+			} else {
+				document.getElementById("popup-stream-friendly-description").textContent = game.game_info.stream_friendly_description;
+			}
+
+			if (game.game_info.subtitles == true) {
+				document.getElementById("popup-subtitles").textContent = "Supported";
+			} else {
+				document.getElementById("popup-subtitles").textContent = "Not Supported";
+			}
+
+                    document.getElementById("popup-categories").textContent = game.game_info.tags.replaceAll(",", " | ";
 
                     const imagesContainer = document.getElementById("popup-images");
                     imagesContainer.innerHTML = "";
@@ -179,7 +189,7 @@ fetch("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en
 
 document.querySelector(".close-btn").addEventListener("click", () => {
     document.getElementById("popup").style.display = "none";
-    document.querySelector('body').overflow = "hidden";
+    document.querySelector('body').style.overflow = "auto";
     document.querySelector('video').pause();
 });
 </script>
