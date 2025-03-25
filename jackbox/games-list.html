@@ -119,11 +119,8 @@ fetch("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en
                 gameDiv.style.backgroundImage = `url(${game.background})`;
                 gameDiv.style.backgroundSize = "cover";
                 gameDiv.style.backgroundPosition = "center";
+		gameDiv.setAttribute("alt", game.name);
 
-                // Add game name
-                const title = document.createElement("p");
-                title.innerText = game.name;
-                gameDiv.appendChild(title);
                 gameDiv.addEventListener("click", () => openPopup(game));
                 container.appendChild(gameDiv); // Append to container
 
