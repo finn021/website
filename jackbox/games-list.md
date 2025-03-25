@@ -162,8 +162,8 @@ fetch("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en
 			}
 
                     document.getElementById("popup-tags").textContent = game.game_info.tags.toString().replaceAll(",", " | ");
-
-                    const imagesContainer = document.getElementById("popup-images");
+document.getElementById("popup-show-images-button").addEventListener("click", () => {
+        const imagesContainer = document.getElementById("popup-images");
                     imagesContainer.innerHTML = "";
                     game.game_info.images.forEach(imgSrc => {
                     	if (imgSrc.endsWith(".mp4")) {
@@ -178,7 +178,10 @@ fetch("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en
                        	 img.src = imgSrc;
                        	 imagesContainer.appendChild(img);
         								}
+                            imagesContainer.style.display = "block";
                     });
+    });
+                    
 
                     document.getElementById("popup").style.display = "flex";
                 }
@@ -186,8 +189,9 @@ fetch("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en
             });
         });
     })
-
+    
 document.querySelector(".close-btn").addEventListener("click", () => {
+    document.getElementById("popup-images").style.display = "none";
     document.getElementById("popup").style.display = "none";
     document.querySelector('body').style.overflow = "auto";
     document.querySelector('video').pause();
