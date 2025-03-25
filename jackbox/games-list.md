@@ -119,6 +119,7 @@ p {
         <p><strong>Comments:</strong> <span id="popup-stream-friendly-description"></span></p>
         <p><strong>Subtitles:</strong> <span id="popup-subtitles"></span></p>
         <p><strong>Tags:</strong> <span style="text-transform:capitalize;" id="popup-tags"></span></p>
+	<button id="popup-show-images-button">Show Images</button>
         <div id="popup-images"></div>
     </div>
 </div></body>
