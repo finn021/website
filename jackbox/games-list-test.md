@@ -1,6 +1,6 @@
 ---
-layout: page
-title: Game List
+layout: sandbox
+title: Game Gallery
 ---
 <head>
     <meta charset="UTF-8">
@@ -169,6 +169,6 @@ fetch("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en
 
 document.querySelector(".close-btn").addEventListener("click", () => {
     document.getElementById("popup").style.display = "none";
-    document.querySelectorAll('video').pause();
+    document.querySelector('video').pause();
 });
 </script>
