@@ -68,9 +68,12 @@ body {
     background: white;
     padding: 20px;
     border-radius: 10px;
-    max-width: 500px;
+    width: 75vw;
+    max-width: 600px;
     text-align: center;
     position: relative;
+    overflow-y: auto;
+    max-height: 70vh;
 }
 
 .close-btn {
@@ -81,10 +84,14 @@ body {
     cursor: pointer;
 }
 
-#popup-images img {
+#popup-images {
     width: 100%;
     margin-top: 10px;
     border-radius: 10px;
+}
+img, video {
+  max-width: 100%;
+  margin-top: 20px;
 }
 </style>
 </head>
@@ -139,9 +146,18 @@ fetch("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en
                     const imagesContainer = document.getElementById("popup-images");
                     imagesContainer.innerHTML = "";
                     game.game_info.images.forEach(imgSrc => {
-                        const img = document.createElement("img");
-                        img.src = imgSrc;
-                        imagesContainer.appendChild(img);
+                    		if (imgSrc.endsWith(".mp4")) {
+           			const video = document.createElement("video");
+            		  video.src = imgSrc;
+                          video.controls = true;
+			  video.preload = true;
+			  video.playsinline = true;
+            		  imagesContainer.appendChild(video);
+       									} else {
+                       	 const img = document.createElement("img");
+                       	 img.src = imgSrc;
+                       	 imagesContainer.appendChild(img);
+        								}
                     });
 
                     document.getElementById("popup").style.display = "flex";
@@ -153,5 +169,6 @@ fetch("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en
 
 document.querySelector(".close-btn").addEventListener("click", () => {
     document.getElementById("popup").style.display = "none";
+    document.querySelectorAll('video').pause();
 });
 </script>

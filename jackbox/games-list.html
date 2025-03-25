@@ -148,6 +148,8 @@ fetch("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en
            			const video = document.createElement("video");
             		  video.src = imgSrc;
                           video.controls = true;
+			  video.preload = true;
+			  video.playsinline = true;
             		  imagesContainer.appendChild(video);
        									} else {
                        	 const img = document.createElement("img");
@@ -165,7 +167,7 @@ fetch("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en
 
 document.querySelector(".close-btn").addEventListener("click", () => {
     document.getElementById("popup").style.display = "none";
-    document.getElementsByTagName("video").pause();
+    document.querySelectorAll('video').pause();
 });
 </script>
 </html>
