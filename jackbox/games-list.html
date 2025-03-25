@@ -6,8 +6,7 @@
     <title>Game Gallery</title>
 <style>
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: monospace;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,15 +17,17 @@ body {
 #game-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    max-width: 90%;
+    justify-content: center; /* Center images */
+    gap: 10px; /* Reduce gap for more items */
+    width: 100%;
+    max-width: 1200px; /* Limit width for large screens */
 }
 
-/* Maintain 635x291 aspect ratio */
+/* Responsive flexible grid */
 .game-item {
-    width: 30vw; /* Adjust size dynamically */
-    height: calc(30vw * (291 / 635)); /* Maintain aspect ratio */
+    flex: 1 1 auto; /* Grow and shrink dynamically */
+    max-width: min(25%, 200px); /* Fit up to 4 per row on wide screens */
+    aspect-ratio: 635 / 291; /* Maintain aspect ratio */
     background-size: cover;
     background-position: center;
     border-radius: 10px;
@@ -36,42 +37,41 @@ body {
     align-items: flex-end;
     justify-content: center;
     text-align: center;
-    transition: transform 0.3s;
+    transition: transform 0.2s;
 }
 
 .game-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .game-title {
     color: white;
-    font-size: 1.2vw;
+    font-size: clamp(10px, 1vw, 14px); /* Responsive text */
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
     font-weight: bold;
-    padding: 10px;
+    padding: 5px;
     background: rgba(0, 0, 0, 0.6);
     width: 100%;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-/* Responsive adjustments */
+
+/* Responsive layout adjustments */
+@media (max-width: 1024px) {
+    .game-item {
+        max-width: min(33%, 180px); /* 3 per row */
+    }
+}
+
 @media (max-width: 768px) {
     .game-item {
-        width: 45vw;
-        height: calc(45vw * (291 / 635));
-    }
-    .game-title {
-        font-size: 2.5vw;
+        max-width: min(50%, 150px); /* 2 per row */
     }
 }
 
 @media (max-width: 480px) {
     .game-item {
-        width: 90vw;
-        height: calc(90vw * (291 / 635));
-    }
-    .game-title {
-        font-size: 4vw;
+        max-width: 100%; /* 1 per row on small screens */
     }
 }
 </style>
