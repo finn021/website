@@ -69,7 +69,6 @@ body {
     border-radius: 10px;
     width: 75vw;
     max-width: 600px;
-    text-align: center;
     position: relative;
     overflow-y: auto;
     max-height: 70vh;
@@ -96,6 +95,12 @@ img, video {
   max-width: 100%;
   margin-top: 20px;
 }
+h2 {
+  font-size: clamp(20px, 3vw, 24px);
+}
+p {
+  font-size: clamp(13px, 2vw, 16px);
+}
 </style>
 </head>
 <body>
@@ -104,7 +109,7 @@ img, video {
 <!-- Popup for game details -->
 <div id="popup" class="popup">
     <div class="popup-content">
-        <span class="close-btn">&times;</span>
+        <span class="close-btn material-icons">close</span>
         <h2 id="popup-title"></h2>
         <p id="popup-description"></p>
         <p><strong>Players:</strong> <span id="popup-players"></span></p>
