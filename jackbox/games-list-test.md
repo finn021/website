@@ -1,6 +1,7 @@
 ---
 layout: sandbox-page
 title: Game Gallery
+full-width: true
 ---
 <head>
     <meta charset="UTF-8">
