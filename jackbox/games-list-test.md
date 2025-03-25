@@ -10,20 +10,18 @@ full-width: true
 <style>
 body {
     font-family: monospace;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
     padding: 20px;
 }
 
 #game-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 10px;
     width: 100%;
-    max-width: 1200px;
 }
 
 .game-item {
@@ -75,6 +73,10 @@ body {
     position: relative;
     overflow-y: auto;
     max-height: 70vh;
+}
+html.dark-mode .popup-content {
+    color: white;
+    background: #0c0b0b;
 }
 
 .close-btn {

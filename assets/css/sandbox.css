@@ -27,7 +27,7 @@ a {
     color: #6b9080;
     text-decoration: underline;
 }
-body.dark-mode a {
+html.dark-mode a {
     color: #a4c3b2;
 }
 li { margin: 0.4rem 0; }
