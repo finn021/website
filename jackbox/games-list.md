@@ -5,7 +5,7 @@ full-width: true
 ---
 <head>
     <style>
-        body {font-family: monospace;padding: 20px;}
+        body {font-family:monospace;padding: 20px;}
 
         #game-container {
             display: flex;
