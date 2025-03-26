@@ -154,7 +154,7 @@ full-width: true
 
                         document.getElementById("popup-tags").textContent = game.game_info.tags.toString().replaceAll(",", " | ");
                         
-                        showImagesButton.addEventListener("click", () => {
+                        showImagesButton.onclick = () => {
                             imagesContainer.innerHTML = "";
                             showImagesButton.style.display = "none";
                             game.game_info.images.forEach(imgSrc => {
@@ -171,7 +171,7 @@ full-width: true
                                 }
                                 imagesContainer.style.display = "block";
                             });
-                        });
+                        };
                     popupContainer.style.display = "flex";
                     }
                 });
