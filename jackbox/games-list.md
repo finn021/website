@@ -178,8 +178,8 @@ full-width: true
             });
         })
     document.querySelector(".close-btn").addEventListener("click", () => {
-        document.imagesContainer.style.display = "none";
-        document.popupContainer.style.display = "none";
+        imagesContainer.style.display = "none";
+        popupContainer.style.display = "none";
         document.body.style.overflow = "auto";
         document.querySelector('video').pause();
     });
