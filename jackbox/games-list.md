@@ -14,7 +14,6 @@ body {
     padding: 20px;
     
 }
-
 #game-container {
     display: flex;
     justify-content: center;
@@ -85,8 +84,11 @@ html.dark-mode .popup-content {
     right: 20px;
     font-size: 20px;
     cursor: pointer;
+    transition: color 300ms linear;
 }
-
+.close-btn:hover {
+    color: red;
+}
 #popup-images {
     width: 100%;
     margin-top: 10px;
@@ -119,7 +121,7 @@ p {
         <p><strong>Comments:</strong> <span id="popup-stream-friendly-description"></span></p>
         <p><strong>Subtitles:</strong> <span id="popup-subtitles"></span></p>
         <p><strong>Tags:</strong> <span style="text-transform:capitalize;" id="popup-tags"></span></p>
-	<button id="popup-show-images-button">Show Images</button>
+	<a id="popup-show-images-button">Show Images</a>
         <div id="popup-images"></div>
     </div>
 </div></body>
