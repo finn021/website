@@ -71,7 +71,7 @@ body {
     max-width: 600px;
     position: relative;
     overflow-y: auto;
-    max-height: 70vh;
+    max-height: 75vh;
 }
 html.dark-mode .popup-content {
     color: white;
@@ -83,11 +83,11 @@ html.dark-mode .popup-content {
     top: 10px;
     right: 20px;
     font-size: 20px;
-    cursor: pointer;
-    transition: color 100ms linear;
+    transition: color 200ms linear;
 }
 .close-btn:hover {
     color: #c51a00;
+    cursor: pointer;
 }
 #popup-images {
     width: 100%;
@@ -137,7 +137,7 @@ fetch("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en
                 gameDiv.classList.add("game-item"); // Add a class for styling
 
                 // Set background image
-                gameDiv.style.backgroundImage = `url(${game.background})`;
+                gameDiv.style.backgroundImage = `url("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en/main/assets/" + ${game.background})`;
                 gameDiv.style.backgroundSize = "cover";
                 gameDiv.style.backgroundPosition = "center";
 		gameDiv.setAttribute("alt", game.name);
@@ -173,14 +173,14 @@ document.getElementById("popup-show-images-button").addEventListener("click", ()
                     game.game_info.images.forEach(imgSrc => {
                     	if (imgSrc.endsWith(".mp4")) {
            		  const video = document.createElement("video");
-            		  video.src = imgSrc;
+            		  video.src = "https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en/main/assets/" + imgSrc;
                           video.controls = true;
 			  video.preload = true;
 			  video.playsinline = true;
             		  imagesContainer.appendChild(video);
        									} else {
                        	 const img = document.createElement("img");
-                       	 img.src = imgSrc;
+                       	 img.src = "https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en/main/assets/" + imgSrc;
                        	 imagesContainer.appendChild(img);
         								}
                             imagesContainer.style.display = "block";
