@@ -84,10 +84,10 @@ html.dark-mode .popup-content {
     right: 20px;
     font-size: 20px;
     cursor: pointer;
-    transition: color 300ms linear;
+    transition: color 100ms linear;
 }
 .close-btn:hover {
-    color: red;
+    color: #c51a00;
 }
 #popup-images {
     width: 100%;
@@ -101,7 +101,7 @@ img, video {
 h2 {
   font-size: clamp(20px, 3vw, 24px);
 }
-p {
+p, a {
   font-size: clamp(13px, 2vw, 16px);
 }
 </style>
@@ -147,6 +147,7 @@ fetch("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en
 
                 function openPopup(game) {
 		    document.querySelector('body').style.overflow = "hidden";
+		    document.getElementById("popup-show-images-button").style.display = "block";
                     document.getElementById("popup-title").textContent = game.name;
                     document.getElementById("popup-description").textContent = game.game_info.description;
                     document.getElementById("popup-players").textContent = `${game.game_info.players.min} - ${game.game_info.players.max}`;
@@ -166,6 +167,7 @@ fetch("https://raw.githubusercontent.com/AkiraArtuhaxis/JackboxUtility-Server-en
 
                     document.getElementById("popup-tags").textContent = game.game_info.tags.toString().replaceAll(",", " | ");
 document.getElementById("popup-show-images-button").addEventListener("click", () => {
+        document.getElementById("popup-show-images-button").style.display = "none";
         const imagesContainer = document.getElementById("popup-images");
                     imagesContainer.innerHTML = "";
                     game.game_info.images.forEach(imgSrc => {
