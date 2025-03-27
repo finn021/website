@@ -1,15 +1,12 @@
 ---
-layout: sandbox-page
-title: Game Gallery
+layout: sandbox
+title: Jackbox Player
 full-width: true
 ---
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Jackbox Player</title>
-        <link rel="manifest" href="/manifest.json">
-    
-        <!-- iOS Web App Settings -->
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <meta name="apple-mobile-web-app-title" content="Jackbox Games">
@@ -22,10 +19,10 @@ full-width: true
 		overflow: hidden;
             }
             .left {
-                flex: 1; /* Take remaining space in landscape */
+                flex: 1;
             }
             .right {
-                flex: 1; /* Equal space in landscape */
+                flex: 1;
                 overflow: hidden;
             }
             .left iframe, .right iframe {
@@ -34,22 +31,22 @@ full-width: true
             }
             @media (orientation: portrait) {
                 body {
-                    flex-direction: column; /* Stack vertically */
+                    flex-direction: column;
                 }
                 .right {
                     flex: 0 0 calc(100vw * 9 / 16); /* Fixed height for the YouTube player */
                     height: calc(100vw * 9 / 16); /* Maintain 16:9 ratio */
                 }
                 .left {
-                    flex: 1; /* Take up all remaining space */
+                    flex: 1;
                 }
                 .left iframe, .right iframe {
-                    height: 100%; /* Fill parent container */
+                    height: 100%; 
                 }
             }
             @media (orientation: landscape) {
                 .left iframe, .right iframe {
-                    height: 100%; /* Fill parent height in landscape */
+                    height: 100%;
                 }
             }
         </style>
@@ -73,7 +70,7 @@ full-width: true
           if (Date.now() - time < 10800000) {
             document.getElementById('streamPlayer').src = `https://www.youtube.com/embed/${videoID}?autoplay=1&controls=0&showinfo=0&disablekb=1&rel=0`;
           } else {
-            document.getElementById('streamPlayer').srcdoc = '<h1 style="font-family:monospace;">No stream is currently active.</h1><h2 style="font-family:monospace;">Please check back later</h2>'
+            document.getElementById('streamPlayer').srcdoc = '<h1 style="font-family:monospace;">No stream is currently active.</h1>'
           }
         })
         .catch(error => {
