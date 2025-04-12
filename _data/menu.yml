@@ -18,6 +18,9 @@ entries:
         url: steam
       - title: THE spreadsheet
         url: spreadsheet
+      - title: guestbook
+        url: guestbook
+
     # - title: games
     #   url: games/
 #  - title: posts
