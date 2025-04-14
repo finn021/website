@@ -1,11 +1,9 @@
 ---
 layout: page
-title: THE Spreadsheet
+title: Minecraft Server
 ---
-## Server Address
-```
-152.69.179.26:25565
-```
-Download Minecraft Java Edition: https://skmedix.pl/
+**Address:** 152.69.179.26:25565
 
-Version: Vanilla 12.5.1
+**Version:** Vanilla 12.5.1
+
+Download Minecraft Java Edition: [SKlauncher](https://skmedix.pl/)
