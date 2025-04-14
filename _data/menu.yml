@@ -14,6 +14,8 @@ entries:
         url: jackbox/games-list
   - title: other
     entries:
+      - title: minecraft server
+        url: minecraft
       - title: steam games
         url: steam
       - title: THE spreadsheet
