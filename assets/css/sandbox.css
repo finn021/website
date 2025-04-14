@@ -40,3 +40,7 @@ ul > li::marker {
 ul > ul > li::marker {
     content: '◇ ';
 }
+@media (max-width: 650px) {
+  .darkmode-banner {
+    display: none;
+  }
