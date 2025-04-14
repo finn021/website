@@ -1,8 +1,10 @@
 ---
 layout: page
-title: Minecraft Server
+title: Minecraft
 ---
-**Address:** 152.69.179.26:25565
+**Server Address:** mc.finnb.xyz
+
+**Backup Address:** 152.69.179.26
 
 **Version:** Vanilla 12.5.1
 
