@@ -5,23 +5,20 @@ title: Minecraft Server
 **Version:** Fabric 12.5.1  
 
 ## Java Edition
-Download Minecraft Java Edition: [SKlauncher](https://skmedix.pl/)
+You can download Java edition for free with [SKlauncher](https://skmedix.pl/).
 
-**IP Address:** mc.finnb.xyz
-
-**Backup Address:** 152.69.179.26:25565
+**Server Address:** mc.finnb.xyz
 
 ## Bedrock Edition
 Ported via Geyser  
 
-**IP Address:** mc.finnb.xyz  
+**Server Address:** mc.finnb.xyz  
 **Port:** default (19132)
 
-**Backup Address:** 152.69.179.26
-
-For consoles, use BedrockTogether to forward the server.
+For consoles, use [BedrockTogether](https://apps.apple.com/au/app/bedrocktogether/id1534593376) to forward the server.
 
 ---
 
+Current status of the server can be found on the [dashboard](https://152.69.179.26:8443/status). (Ignore warning of insecure connection)  
 
-
+If the server address does not work, the IP address is 152.69.179.26.
