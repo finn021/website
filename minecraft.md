@@ -26,7 +26,7 @@ Current status of the server can be found on the [dashboard<span style='font-siz
 
 If the server address does not work, the IP address is 152.69.179.26.
 
-### Mod List
+### Mod List - All server side only
 
 - bluemap-5.7-fabric.jar  
 - collective-1.21.5-8.2.jar  
