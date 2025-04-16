@@ -2,9 +2,9 @@
 layout: page
 title: Minecraft Server
 ---
-**Version:** [Fabric] 12.5.1
+**Version:** 12.5.1
 
-*View full interactive generated 3D map at [mc.finnb.xyz/map](https://mc.finnb.xyz/map/).*
+View interactive generated 3D map at [mc.finnb.xyz/map](https://mc.finnb.xyz/map/).
 
 ## Java Edition
 You can download Java edition for free with [SKlauncher<span style='font-size:16px;' class='material-symbols-outlined'>open_in_new</span>](https://skmedix.pl/).
@@ -12,7 +12,7 @@ You can download Java edition for free with [SKlauncher<span style='font-size:16
 **Server Address:** mc.finnb.xyz
 
 ## Bedrock Edition
-Ported via Geyser  
+Ported via Geyser - may be slightly unstable.  
 
 **Server Address:** mc.finnb.xyz  
 **Port:** default (19132)
