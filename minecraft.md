@@ -7,7 +7,7 @@ title: Minecraft Server
 View interactive generated 3D map at [mc.finnb.xyz/map](https://mc.finnb.xyz/map/).
 
 ## Java Edition
-You can download Java edition for free with [SKlauncher<span style='font-size:16px;' class='material-symbols-outlined'>open_in_new</span>](https://skmedix.pl/).
+You can download Java edition for free with [SKlauncher<span style='font-size:16px;' class='material-symbols-outlined'>open_in_new</span>](https://skmedix.pl/downloads).
 
 **Server Address:** mc.finnb.xyz
 
