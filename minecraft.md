@@ -4,7 +4,7 @@ title: Minecraft Server
 ---
 **Version:** [Fabric] 12.5.1
 
-*View full interactive generated 3D map at [mcmap.finnb.xyz](https://mcmap.finnb.xyz/).*
+*View full interactive generated 3D map at [mc.finnb.xyz/map](https://mc.finnb.xyz/map/).*
 
 ## Java Edition
 You can download Java edition for free with [SKlauncher<span style='font-size:16px;' class='material-symbols-outlined'>open_in_new</span>](https://skmedix.pl/).
@@ -22,13 +22,14 @@ For consoles, use [BedrockTogether<span style='font-size:16px;' class='material-
 ---
 You must be on the whitelist to connect.
 
-Current status of the server can be found on the [dashboard<span style='font-size:16px;' class='material-symbols-outlined'>open_in_new</span>](https://152.69.179.26:8443/status) (Ignore warning of insecure connection).  
+Current status of the server can be found at [crafty.finnb.xyz/status](https://crafty.finnb.xyz/status).
 
 If the server address does not work, the IP address is 152.69.179.26.
 
 ### Mod List - All server side only
 
 - bluemap-5.7-fabric.jar  
+- bluemapsignmarkers-1.21.5-0.8.0.45.jar  
 - collective-1.21.5-8.2.jar  
 - cyclepaintings-1.21.5-4.1.jar  
 - doubledoors-1.21.5-6.2.jar  
