@@ -1,0 +1,18 @@
+title: finn's website
+# author: Finn B
+email: finn@finnb.xyz
+description: welcome to my personal website.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://finnb.xyz" # the base hostname & protocol for your site, e.g. http://example.com
+
+favicon: "favicon.png"
+remote_theme: riggraz/no-style-please
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+theme_config:
+  back_home_text: "back"
+  date_format: "%d-%m-%Y"
+  show_description: false

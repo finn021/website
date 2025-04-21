@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jackbox Player</title>
+        <link rel="manifest" href="/manifest.json">
+    
+        <!-- iOS Web App Settings -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="Jackbox Games">
+        <style>
+            body {
+                display: flex;
+                flex-direction: row;
+                margin: 0;
+                height: 100vh;
+            }
+            .left {
+                flex: 1; /* Take remaining space in landscape */
+            }
+            .right {
+                flex: 1; /* Equal space in landscape */
+                overflow: hidden;
+            }
+            .left iframe, .right iframe {
+                width: 100%;
+                border: none;
+            }
+            @media (orientation: portrait) {
+                body {
+                    flex-direction: column; /* Stack vertically */
+                }
+                .right {
+                    flex: 0 0 calc(100vw * 9 / 16); /* Fixed height for the YouTube player */
+                    height: calc(100vw * 9 / 16); /* Maintain 16:9 ratio */
+                }
+                .left {
+                    flex: 1; /* Take up all remaining space */
+                }
+                .left iframe, .right iframe {
+                    height: 100%; /* Fill parent container */
+                }
+            }
+            @media (orientation: landscape) {
+                .left iframe, .right iframe {
+                    height: 100%; /* Fill parent height in landscape */
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="left">
+            <iframe src="https://jackbox.tv"></iframe>
+        </div>
+        <div class="right">
+            <iframe id="streamPlayer"></iframe>
+        </div>
+    </body>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const binUrl = 'https://api.jsonbin.io/v3/b/67e10e718a456b79667b8270/latest';
+      fetch(binUrl)
+        .then(response => response.json())
+        .then(data => {
+          const videoID = data.record.video_id;
+          const time = data.record.time;
+          if (Date.now() - time < 10800000) {
+            document.getElementById('streamPlayer').src = `https://www.youtube.com/embed/${videoID}?autoplay=1&controls=0&showinfo=0&disablekb=1&rel=0`;
+          } else {
+            document.getElementById('streamPlayer').srcdoc = '<h1 style="font-family:monospace;">No stream is currently active.</h1><h2 style="font-family:monospace;">Please check back later</h2>'
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+        });
+    });
+    </script>
+</html>

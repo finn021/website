@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: "en" }}">
+  {%- include head-sandbox.html -%}
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <body a="{{ site.theme_config.appearance | default: "auto" }}">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+	<button id="dark-mode-toggle" onclick="toggleDarkMode()">
+ 	<span class="material-icons" id="dark-mode-icon">light_mode</span>
+	</button>
+        {{ content }}
+      </div>
+    </main>
+
+    {%-if site.goat_counter and jekyll.environment == "production"-%}
+      {%-include goat_counter.html-%}
+    {%-endif-%}
+
+    {% if page.custom_js %}
+      {% for js_file in page.custom_js %}
+        <script type="text/javascript" src="{{ site.baseurl }}/assets/js/{{ js_file }}.js"></script>
+      {% endfor %}
+    {% endif %}
+  </body>
+  <script>
+// Function to set a cookie
+function setCookie(name, value, days) {
+  var expires = "";
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+// Function to get a cookie
+function getCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+
+// Function to check and apply dark mode based on the cookie
+function checkDarkMode() {
+  var darkMode = getCookie("darkMode");
+  if (darkMode === "enabled") {
+    document.documentElement.classList.add("dark-mode");
+    document.getElementById("dark-mode-icon").textContent = "brightness_3"; // Moon icon
+  } else {
+    document.documentElement.classList.remove("dark-mode");
+    document.getElementById("dark-mode-icon").textContent = "light_mode"; // Sun icon
+  }
+}
+
+// Function to toggle dark mode and set the cookie
+function toggleDarkMode() {
+  var element = document.documentElement;
+  element.classList.add("transition-bg"); // Add transition class
+  element.classList.toggle("dark-mode");
+
+  var icon = document.getElementById("dark-mode-icon");
+  if (element.classList.contains("dark-mode")) {
+    icon.textContent = "brightness_3"; // Moon icon
+    setCookie("darkMode", "enabled", 7); // Set cookie for 7 days
+  } else {
+    icon.textContent = "light_mode"; // Sun icon
+    setCookie("darkMode", "disabled", 7); // Set cookie for 7 days
+  }
+ setTimeout(function() {
+      element.classList.remove("transition-bg");
+    }, 1200); // Match the transition duration
+  }
+
+
+// Check dark mode on page load
+document.addEventListener("DOMContentLoaded", checkDarkMode);
+
+  </script>
+</html>
