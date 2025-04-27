@@ -1,7 +1,7 @@
 entries:
   - title: email
     entries:
-      -title: "<a href='mailto:finn@finnb.xyz'>finn@finnb.xyz</a>"
+      - title: "<a href='mailto:finn@finnb.xyz'>finn@finnb.xyz</a>"
   #  entries:
       # - title: "email:"
     #  - title: "<a href='https://bsky.app/profile/finnb.xyz' target='_blank'>bluesky<span style='font-size:16px;' class='material-symbols-outlined'>open_in_new</span></a>"
