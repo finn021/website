@@ -17,10 +17,10 @@ entries:
     entries:
       - title: minecraft server
         url: minecraft
-      - title: steam games
-        url: steam
-      - title: THE spreadsheet
-        url: spreadsheet
+      - title: other games
+        url: games
+      - title: tools
+        url: tools
 
     # - title: games
     #   url: games/

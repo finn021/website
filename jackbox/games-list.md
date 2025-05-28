@@ -1,6 +1,6 @@
 ---
 layout: sandbox-page
-title: Game Gallery
+title: Jackbox Game Gallery
 full-width: true
 ---
 <head>
@@ -10,7 +10,7 @@ full-width: true
     <div id="game-container"></div>
     <div id="popup" class="popup">
         <div class="popup-content">
-            <span class="close-btn material-icons">close</span>
+            <p class="close-btn material-icons">close</p>
             <h2 id="popup-title"></h2>
             <p id="popup-description"></p>
             <p><strong>Players:</strong> <span id="popup-players"></span></p>

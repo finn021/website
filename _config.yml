@@ -1,7 +1,7 @@
-title: finn's website
+title: finnb.xyz
 # author: Finn B
 email: finn@finnb.xyz
-description: welcome to my personal website.
+description: finn's website
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://finnb.xyz" # the base hostname & protocol for your site, e.g. http://example.com
 
