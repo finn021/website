@@ -12,7 +12,7 @@ title: Useful Tools
 [uBlock Origin](https://ublockorigin.com/) | Open source ad blocker  
 [TwitchNoSub](https://github.com/besuper/TwitchNoSub) | Bypass sub-only VODs  
 [SponsorBlock](https://sponsor.ajay.app/) | Skip YouTube sponsors  
-[YouTube Age Restriction Bypass](https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass/)  
+[~~YouTube Age Restriction Bypass~~](https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass/) | No longer working
 
 ### Other
 [Cloudflare WARP](https://one.one.one.one/) | Bypass ISP DNS blocks  
