@@ -70,7 +70,7 @@
           if (Date.now() - time < 10800000) {
             document.getElementById('streamPlayer').src = `https://www.youtube.com/embed/${videoID}?autoplay=1&controls=0&showinfo=0&disablekb=1&rel=0`;
           } else {
-            document.getElementById('streamPlayer').srcdoc = '<div style="position:absolute;top:0;left:0;height:50px;width:100%;background:#4254f4;"><h1 style="font-family:monospace;color:white;text-align:center;margin-bottom:15px;">No stream is currently active.</h1></div><h2 style="font-family:monospace;color:white;margin-top:60px;">Please refresh your page or check back later.</h2>'
+            document.getElementById('streamPlayer').srcdoc = '<div style="position:absolute;top:0;left:0;height:50px;width:100%;background:#4254f4;"><h1 style="font-family:monospace;color:white;text-align:center;margin-top:10px;">No stream is currently active.</h1></div><h2 style="font-family:monospace;color:white;text-align:center;margin-top:65px;">Please refresh your page or check back later.</h2>'
           }
         })
         .catch(error => {
