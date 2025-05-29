@@ -10,8 +10,7 @@ entries:
     #   url: https://open.spotify.com/user/hk4af9tr1agt0o62bazp767nh
 
     entries:
-     # - title: "<a href='jackbox' target='_blank'>player<span style='font-size:16px;' class='material-symbols-outlined'>open_in_new</span></a>"
-      - title: "<a href='jackbox'>player</a>"
+      - title: "<a href='jackbox' target='_blank'>player<span style='font-size:16px;' class='material-symbols-outlined'>open_in_new</span></a>"
       - title: game list
         url: jackbox/games-list
   - title: other
