@@ -18,15 +18,6 @@
                 height: 100vh;
                 background-color: #0a1420;
             }
-            .top-bar {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 50px;
-                width: 100%;
-                background: #4254f4;
-                z-index: 100;
-            }
             .left {
                 flex: 1; /* Take remaining space in landscape */
             }
@@ -79,7 +70,7 @@
           if (Date.now() - time < 10800000) {
             document.getElementById('streamPlayer').src = `https://www.youtube.com/embed/${videoID}?autoplay=1&controls=0&showinfo=0&disablekb=1&rel=0`;
           } else {
-            document.getElementById('streamPlayer').srcdoc = '<div class="top-bar"><h1 style="font-family:monospace;color:white;">No stream is currently active.</h1></div><h2 style="font-family:monospace;color:white;">Please refresh your page or check back later.</h2>'
+            document.getElementById('streamPlayer').srcdoc = '<div style="position:absolute;top:0;left:0;height:50px;width:100%;background:#4254f4;"><h1 style="font-family:monospace;color:white;">No stream is currently active.</h1></div><h2 style="font-family:monospace;color:white;">Please refresh your page or check back later.</h2>'
           }
         })
         .catch(error => {
