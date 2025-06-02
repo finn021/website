@@ -41,7 +41,7 @@ full-width: true
                 .then(data => {
                     data.packs.forEach(pack => {
                         pack.games.forEach(game => {
-                            if (!blacklistData.record.blacklistedGames.includes(game.id)) {
+                            if (!blacklistData.record.blacklistedGames.includes(game.id) && !game.id.includes('_ms')) {
                                 const gameDiv = document.createElement("div");
                                 gameDiv.classList.add("game-item");
                                 gameDiv.style.backgroundImage = "url(" + assetsUrl + game.background + ")";
