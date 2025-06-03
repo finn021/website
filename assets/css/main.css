@@ -72,8 +72,8 @@ table, th, td {
   border-collapse: collapse;
   padding: 0.4rem;
 }
-html.dark-mode table, html.dark-mode, html.dark-mode td {
-  border: white;
+html.dark-mode table, html.dark-mode th, html.dark-mode td {
+  border: thin solid white;
 }
 code {
   color: white;
