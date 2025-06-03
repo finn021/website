@@ -39,6 +39,7 @@ p { margin: 1rem 0; }
 a {
     color: #6b9080;
     text-decoration: underline;
+    cursor: pointer;
 }
 html.dark-mode a {
     color: #a4c3b2;
@@ -65,27 +66,29 @@ hr {
   &:before { content: '/////' }
   &:after { content: attr(data-content) '/////' }
 }
-
 table { width: 100%; }
-
 table, th, td {
   border: thin solid black;
   border-collapse: collapse;
   padding: 0.4rem;
 }
-
+html.dark-mode table, th, td {
+  border: thin solid white;
+}
 code {
   color: white;
   background: black;
 }
-
+html.dark-mode code {
+  color: black;
+  background: white;
+}
 div.highlighter-rouge code {
   display: block;
   overflow-x: auto;
   white-space: pre-wrap;
   padding: 1rem;
 }
-
 blockquote {
   font-style: italic;
   border: thin solid black;
@@ -93,7 +96,9 @@ blockquote {
 
   p { margin: 0; }
 }
-
+html.dark-mode blockquote {
+  border: thin solid white;
+}
 img {
   max-width: 100%;
   display: block;
