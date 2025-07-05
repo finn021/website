@@ -21,6 +21,12 @@ entries:
         url: games
       - title: tools
         url: tools
+  - title: public transport
+    entries:
+      - title: Corowa - Albury via Rutherglen & Chiltern Timetable
+        url: https://dpy5ld4krle9f.cloudfront.net/1751533766210/bus-2349-2009-02-11-2025-12-31.pdf
+      - title: Corowa - Wangaratta via Rutherglen (V/Line) Timetable
+        url: https://www.vline.com.au/getattachment/6ccc7657-5eba-46f5-87ee-e5e860c9fe19/Corowa-Melbourne-(via-Rutherglen-and-Wangaratta)
 
     # - title: games
     #   url: games/
