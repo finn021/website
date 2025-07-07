@@ -19,16 +19,10 @@ entries:
         url: minecraft
       - title: other games
         url: games
-      - title: tools
-        url: tools
-  - title: timetables
-    entries:
-      - title: corowa - albury via rutherglen, chiltern etc. (bus)
-        url: https://dpy5ld4krle9f.cloudfront.net/1751533766210/bus-2349-2009-02-11-2025-12-31.pdf
-      - title: corowa - wangaratta via rutherglen (v/line coach)
-        url: https://www.vline.com.au/getattachment/6ccc7657-5eba-46f5-87ee-e5e860c9fe19/Corowa-Melbourne-(via-Rutherglen-and-Wangaratta)
-      - title: melbourne - albury via wangaratta, chiltern etc. (v/line train)
-        url: https://www.vline.com.au/getattachment/90b9a59e-f637-4c36-973c-02e404ba4266/Albury-Wodonga-Melbourne-(via-Wangaratta-Bena)
+ #     - title: tools
+  #      url: tools
+      - title: public transport
+        url: transport
 
     # - title: games
     #   url: games/
