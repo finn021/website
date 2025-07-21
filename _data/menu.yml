@@ -23,6 +23,8 @@ entries:
   #      url: tools
       - title: public transport
         url: transport
+  - title: GAME LINK
+    url: link.finnb.xyz/game
 
     # - title: games
     #   url: games/
