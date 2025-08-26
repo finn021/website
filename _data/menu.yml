@@ -6,8 +6,6 @@ entries:
       # - title: "email:"
     #  - title: "<a href='https://bsky.app/profile/finnb.xyz' target='_blank'>bluesky<span style='font-size:16px;' class='material-symbols-outlined'>open_in_new</span></a>"
     # - title: spotify 🡥
-  - title: media library
-    url: https://media.finnb.xyz/
   - title: jackbox
     #   url: https://open.spotify.com/user/hk4af9tr1agt0o62bazp767nh
     entries:
@@ -20,6 +18,8 @@ entries:
         url: minecraft
       - title: other games
         url: games
+      - title: media library
+        url: https://media.finnb.xyz/
  #     - title: tools
   #      url: tools
    #   - title: public transport
