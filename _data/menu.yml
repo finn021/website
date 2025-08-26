@@ -29,9 +29,9 @@ entries:
 
     # - title: games
     #   url: games/
-#  - title: posts
-#    post_list:
-#      limit: 4
-#      show_more: true
-#      show_more_text: see archive..
-#      show_more_url: archive.html
+ #  - title: posts
+ #    post_list:
+ #      limit: 4
+ #      show_more: true
+ #      show_more_text: see archive..
+ #      show_more_url: archive.html
