@@ -14,10 +14,10 @@ entries:
         url: jackbox/games-list
   - title: other
     entries:
-      - title: minecraft server
-        url: minecraft
-      - title: other games
-        url: games
+   #   - title: minecraft server
+    #    url: minecraft
+   #   - title: other games
+   #     url: games
       - title: media library
         url: https://media.finnb.xyz/
  #     - title: tools
