@@ -18,8 +18,8 @@ entries:
         url: minecraft
    #   - title: other games
    #     url: games
-   #   - title: media library
-    #    url: https://media.finnb.xyz/
+      - title: media library
+        url: https://media.finnb.xyz/
  #     - title: tools
   #      url: tools
    #   - title: public transport
